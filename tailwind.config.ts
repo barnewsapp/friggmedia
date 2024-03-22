@@ -14,6 +14,7 @@ const config: Config = {
       },
       colors: {
         background: '#F6F6FE',
+        'gray-700': '#374151',
       },
     },
   },
