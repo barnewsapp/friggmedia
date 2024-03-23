@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { ChakraProvider } from '@chakra-ui/react';
+
 import { Poppins } from 'next/font/google';
 import './globals.css';
 
@@ -20,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <ChakraProvider>{children}</ChakraProvider>
+      </body>
     </html>
   );
 }
