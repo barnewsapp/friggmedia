@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { Header } from './components/Header';
+import { CallToAction } from './components/CallToAction';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <div className="bg-background h-full"></div>
+      <CallToAction />
       <Footer />
     </div>
   );
