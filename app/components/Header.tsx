@@ -11,11 +11,11 @@ export function Header() {
       <div className="mt-6">
         <a
           href="#"
-          className="text-white text-lg md:text-xl font-light bg-blue-700  hover:bg-blue-800  py-2 px-4 rounded inline-block"
+          className="text-white text-md md:text-xl font-light bg-blue-700  hover:bg-blue-800  py-2 px-4 rounded inline-block"
         >
           Kontakt oss
         </a>
-        <a href="#" className="text-blue-800 text-lg md:text-xl  font-light hover:underline ml-4">
+        <a href="#" className="text-blue-800 text-md md:text-xl  font-light hover:underline ml-4">
           Våre produkter
         </a>
       </div>
