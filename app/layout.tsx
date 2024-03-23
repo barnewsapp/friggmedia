@@ -1,12 +1,19 @@
 import type { Metadata } from 'next';
 import { ChakraProvider } from '@chakra-ui/react';
 
-import { Poppins } from 'next/font/google';
+import { Poppins, Lora } from 'next/font/google';
 import './globals.css';
 
 const poppins = Poppins({
   weight: ['400', '600'], // Add any other weights you need
   style: ['normal', 'italic'], // Add any other styles you need
+  subsets: ['latin'], // Include any other subsets if necessary
+});
+
+const lora = Lora({
+  weight: ['500', '600', '700'], // Add any other weights you need
+  style: ['normal', 'italic'], // Add any other styles you need
+
   subsets: ['latin'], // Include any other subsets if necessary
 });
 
@@ -22,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${lora.className}${poppins.className} bg-background`}>
         <ChakraProvider>{children}</ChakraProvider>
       </body>
     </html>

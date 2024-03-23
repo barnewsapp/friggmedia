@@ -31,7 +31,7 @@ export function Footer() {
             </a>
           </div>
           <div className="flex gap-6">
-            <span className="text-gray-700 items-center text-lg my-4 ">
+            <span className="text-gray-700 items-center text-lg my-2 ">
               &copy; Frigg Media AS 2024
             </span>
             <div className="flex space-x-4 items-center">

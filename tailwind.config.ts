@@ -15,6 +15,11 @@ const config: Config = {
       colors: {
         background: '#F6F6FE',
         'gray-700': '#374151',
+        'title-color': '#080B5E',
+        'subtitle-color': '#070746',
+      },
+      fontFamily: {
+        lora: ['Lora', 'serif'],
       },
     },
   },
