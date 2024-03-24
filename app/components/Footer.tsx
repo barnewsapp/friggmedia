@@ -8,7 +8,8 @@ export function Footer() {
           <div className="mb-4 md:mb-0 ">
             <a href="#">
               <Image
-                src="/friggmedia/logo.svg"
+                // src="/friggmedia/logo.svg"
+                src="/logo.svg"
                 alt="Friggmedia Logo"
                 width={175}
                 height={40}
@@ -37,7 +38,8 @@ export function Footer() {
             <div className="flex space-x-4 items-center">
               <a href="#" aria-label="Facebook" className="text-blue-800 hover:text-blue-600">
                 <Image
-                  src="/friggmedia/facebook.svg"
+                  // src="/friggmedia/facebook.svg"
+                  src="/facebook.svg"
                   alt="Friggmedia Logo"
                   width={18}
                   height={18}
@@ -46,7 +48,8 @@ export function Footer() {
               </a>
               <a href="#" aria-label="Instagram" className="text-blue-800 hover:text-blue-600">
                 <Image
-                  src="/friggmedia/instagram.svg"
+                  // src="/friggmedia/instagram.svg"
+                  src="/instagram.svg"
                   alt="Friggmedia Logo"
                   width={18}
                   height={18}
@@ -59,7 +62,8 @@ export function Footer() {
                 className="text-blue-800 hover:text-blue-600"
               >
                 <Image
-                  src="/friggmedia/twitter.svg"
+                  // src="/friggmedia/twitter.svg"
+                  src="/twitter.svg"
                   alt="Friggmedia Logo"
                   width={18}
                   height={18}

@@ -11,7 +11,8 @@ export function Products() {
         <div className="col-span-3 ">
           <div className=" flex flex-1 flex-col justify-center items-center py-8 gap-4  h-full bg-white">
             <Image
-              src="/friggmedia/product-buyandread.svg"
+              // src="/friggmedia/product-buyandread.svg"
+              src="/product-buyandread.svg"
               alt="BuyAndRead"
               className="mb-4"
               width={120}
@@ -28,7 +29,8 @@ export function Products() {
         <div className=" col-span-2">
           <div className=" flex flex-1 flex-col justify-center items-center h-full py-8 gap-4  bg-white">
             <Image
-              src="/friggmedia/product-newsapp.svg"
+              // src="/friggmedia/product-newsapp.svg"
+              src="/product-newsapp.svg"
               alt="BuyAndRead"
               className="mb-4"
               width={160}
@@ -56,7 +58,8 @@ export function Products() {
         <div className="col-span-3 row-span-2 ">
           <div className="flex px-4 bg-white">
             <Image
-              src="/friggmedia/product-ereader.svg"
+              // src="/friggmedia/product-ereader.svg"
+              src="/product-ereader.svg"
               alt="BuyAndRead"
               className="mb-4"
               width={125}
@@ -77,7 +80,8 @@ export function Products() {
         <div className="col-span-3 row-span-2 ">
           <div className="flex px-4  bg-white">
             <Image
-              src="/friggmedia/product-buyandread.svg"
+              // src="/friggmedia/product-buyandread.svg"
+              src="/product-buyandread.svg"
               alt="BuyAndRead"
               className="mb-4"
               width={70}
