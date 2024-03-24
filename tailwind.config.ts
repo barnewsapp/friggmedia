@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         background: '#F6F6FE',
         'gray-700': '#374151',
+        'gray-2': '#8F8FA3',
         'title-color': '#080B5E',
         'subtitle-color': '#070746',
       },
