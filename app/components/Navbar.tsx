@@ -42,14 +42,7 @@ export function Navbar() {
           />
           <HStack spacing={8} alignItems={'center'} justify="end" borderColor={'red.900'}>
             <Box>
-              <Image
-                // src="/friggmedia/logo.svg"
-                src="/logo.svg"
-                alt="Friggmedia Logo"
-                width={175}
-                height={40}
-                priority
-              />
+              <Image src="/logo.svg" alt="Friggmedia Logo" width={175} height={40} priority />
             </Box>
           </HStack>
           <Flex alignItems={'center'}>
