@@ -15,9 +15,6 @@ export function Footer() {
         <div className="flex flex-col  md:flex-row md:justify-between md:items-center   ">
           <div className="flex gap-6 ">
             <a href="#" className="text-gray-700 text-lg hover:text-blue-600">
-              Produkter
-            </a>
-            <a href="#" className="text-gray-700 text-lg hover:text-blue-600">
               Om oss
             </a>
             <a href="#" className="text-gray-700 text-lg hover:text-blue-600">

@@ -8,7 +8,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Links = ['Produkter', 'Om oss', 'Kontakt oss'];
+const Links = ['Om oss', 'Kontakt oss'];
 
 const NavLink = (props: Props) => {
   const { children } = props;

@@ -29,6 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className={`${lora.className}${poppins.className} bg-background`}>
         <ChakraProvider>{children}</ChakraProvider>
       </body>
