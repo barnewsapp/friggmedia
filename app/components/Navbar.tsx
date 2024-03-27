@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Logo } from './Logo';
 import ThemeSwitch from './ThemeSwitch';
 
-export const Nav = () => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
