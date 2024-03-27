@@ -7,13 +7,15 @@
   --foreground: black;
   --title: #080b5e;
   --subtitle: #070746;
+  --card: white;
 }
 
 [data-theme='dark'] {
-  --background: #0c0c17;
+  --background: #020213;
   --foreground: white;
   --title: white;
   --subtitle: white;
+  --card: #0c0c17;
 }
 
 body {

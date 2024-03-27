@@ -18,6 +18,7 @@ const config: Config = {
         'gray-2': '#8F8FA3',
         title: 'var(--title)',
         subtitle: 'var(--subtitle)',
+        card: 'var(--card)',
       },
       fontFamily: {
         lora: ['Lora', 'serif'],
