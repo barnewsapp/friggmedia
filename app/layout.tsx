@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import { ChakraProvider } from '@chakra-ui/react';
 
 import { Poppins, Lora } from 'next/font/google';
 import './globals.css';
@@ -32,9 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className={`${lora.className}${poppins.className} `}>
-        <ChakraProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </ChakraProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
