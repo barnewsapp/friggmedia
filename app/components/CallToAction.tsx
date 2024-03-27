@@ -1,7 +1,7 @@
 export function CallToAction() {
   return (
     <div className=" flex flex-col mx-auto mb-24 space-y-5 items-center">
-      <h1 className="text-3xl lg:text-5xl  text-title-color font-lora font-medium ">
+      <h1 className="text-3xl lg:text-5xl light:text-title-color font-lora font-medium ">
         Høres dette interessant ut?
       </h1>
       <a

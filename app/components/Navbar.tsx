@@ -3,6 +3,7 @@
 import { Box, Flex, HStack, IconButton, useDisclosure, Stack } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
+import ThemeSwitch from './ThemeSwitch';
 
 interface Props {
   children: React.ReactNode;
@@ -19,7 +20,7 @@ const NavLink = (props: Props) => {
       py={1}
       rounded={'md'}
       href={'#'}
-      className="text-black opacity-55 text-xl hover:text-blue-600 transition-colors"
+      className=" opacity-55 text-xl hover:text-blue-600 transition-colors"
     >
       {children}
     </Box>
@@ -31,7 +32,7 @@ export function Navbar() {
 
   return (
     <>
-      <Box className="bg-background px-8 py-4">
+      <Box className=" px-8 py-4">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -50,6 +51,7 @@ export function Navbar() {
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
+              <ThemeSwitch />
             </HStack>
           </Flex>
         </Flex>
