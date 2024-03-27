@@ -11,7 +11,7 @@ function Card({ children }: { children: React.ReactNode }) {
 export function Products() {
   return (
     <div className="flex flex-col gap-4 mx-auto py-4 mb-40 md:max-w-screen-md ">
-      <h2 className="text-2xl md:text-4xl text-center mb-8 light:text-title-color font-lora font-bold ">
+      <h2 className="text-2xl md:text-4xl text-center mb-8 text-title font-lora font-bold ">
         Våre produkter
       </h2>
 

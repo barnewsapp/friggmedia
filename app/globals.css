@@ -5,13 +5,15 @@
 :root {
   --background: #f6f6fe;
   --foreground: black;
-  --title-color: #080b5e;
+  --title: #080b5e;
+  --subtitle: #070746;
 }
 
 [data-theme='dark'] {
-  --background: #020213;
+  --background: #0c0c17;
   --foreground: white;
-  --title-color: red;
+  --title: white;
+  --subtitle: white;
 }
 
 body {

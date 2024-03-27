@@ -4,6 +4,7 @@ import { Box, Flex, HStack, IconButton, useDisclosure, Stack } from '@chakra-ui/
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import ThemeSwitch from './ThemeSwitch';
+import { Logo } from './Logo';
 
 interface Props {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ const NavLink = (props: Props) => {
       py={1}
       rounded={'md'}
       href={'#'}
-      className=" opacity-55 text-xl hover:text-blue-600 transition-colors"
+      className="light:opacity-55 text-xl hover:text-blue-600 transition-colors"
     >
       {children}
     </Box>
@@ -42,9 +43,7 @@ export function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'} justify="end" borderColor={'red.900'}>
-            <Box>
-              <Image src="/logo.svg" alt="Friggmedia Logo" width={175} height={40} priority />
-            </Box>
+            <Logo />
           </HStack>
           <Flex alignItems={'center'}>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
