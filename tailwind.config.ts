@@ -16,7 +16,6 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        background: '#F6F6FE',
         'gray-700': '#374151',
         'gray-2': '#8F8FA3',
         title: 'var(--title)',
@@ -31,8 +30,19 @@ const config: Config = {
   },
   plugins: [
     nextui({
-      font: {
-        sans: 'poppins',
+      themes: {
+        dark: {
+          colors: {
+            background: '#0D001A',
+            foreground: '#ffffff',
+          },
+        },
+        light: {
+          colors: {
+            background: '#ffffff',
+            foreground: '#0D001A',
+          },
+        },
       },
     }),
   ],

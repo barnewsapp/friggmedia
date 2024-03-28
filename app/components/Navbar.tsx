@@ -12,6 +12,7 @@ import {
   Link,
 } from '@nextui-org/react';
 import { Logo } from './Logo';
+import { ThemeSwitcher } from './ThemeSwitch';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -21,7 +22,7 @@ export function Navbar() {
   return (
     <NUINavbar
       maxWidth="full"
-      className="px-8 justify-between"
+      className="px-8 bg-background justify-between"
       classNames={{ wrapper: 'px-0' }}
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
@@ -53,6 +54,8 @@ export function Navbar() {
           </Link>
         </NavbarItem>
       </NavbarContent>
+
+      <ThemeSwitcher />
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
