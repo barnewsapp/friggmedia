@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <NUINavbar
       maxWidth="full"
-      className="px-8 bg-background justify-between"
+      className="px-8 justify-between"
       classNames={{ wrapper: 'px-0' }}
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}

@@ -7,9 +7,7 @@ import React from 'react';
 export function NextUIProvider({ children }: { children: React.ReactNode }) {
   return (
     <NUIProvider>
-      <NextThemesProvider attribute="class" defaultTheme="dark">
-        {children}
-      </NextThemesProvider>
+      <NextThemesProvider>{children}</NextThemesProvider>
     </NUIProvider>
   );
 }

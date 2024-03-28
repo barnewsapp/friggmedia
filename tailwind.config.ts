@@ -33,14 +33,20 @@ const config: Config = {
       themes: {
         dark: {
           colors: {
-            background: '#0D001A',
-            foreground: '#ffffff',
+            background: '#020212',
+            foreground: 'white',
+            title: '#ffffff',
+            subtitle: '#ffffff',
+            card: '#0c0c17',
           },
         },
         light: {
           colors: {
-            background: '#ffffff',
-            foreground: '#0D001A',
+            background: '#f6f6fe',
+            foreground: '#000000',
+            title: '#080b5e',
+            subtitle: '#070746',
+            card: 'white',
           },
         },
       },
