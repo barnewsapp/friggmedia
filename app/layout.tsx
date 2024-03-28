@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ThemeProvider } from 'next-themes';
+import { NextUIProvider } from './components/NextUIProvider';
 
 import { Poppins, Lora } from 'next/font/google';
 import './globals.css';
@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className={`${lora.className}${poppins.className} `}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <NextUIProvider>{children}</NextUIProvider>
       </body>
     </html>
   );
