@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
-    <div className=" flex flex-1 flex-col justify-center items-center py-8 gap-4 rounded-md shadow-md h-full bg-card">
+    <div className=" flex flex-1 flex-col justify-center items-center py-8 gap-4 rounded-md shadow-md h-full dark:bg-card-dark">
       {children}
     </div>
   );
@@ -11,7 +11,7 @@ function Card({ children }: { children: React.ReactNode }) {
 export function Products() {
   return (
     <div className="flex flex-col gap-4 mx-auto py-4 mb-40 md:max-w-screen-md ">
-      <h2 className="text-2xl md:text-4xl text-center mb-8 text-title font-lora font-bold ">
+      <h2 className="text-2xl md:text-4xl text-center mb-8 light:text-title font-lora font-bold ">
         Våre produkter
       </h2>
 
@@ -62,7 +62,7 @@ export function Products() {
           </Card>
         </div>
         <div className="col-span-3 row-span-2 ">
-          <div className="flex px-4 bg-card rounded-md shadow-md">
+          <div className="flex px-4 dark:bg-card-dark rounded-md shadow-md">
             <Image
               src="/product-ereader.svg"
               alt="BuyAndRead"
@@ -83,7 +83,7 @@ export function Products() {
           </div>
         </div>
         <div className="col-span-3 row-span-2 ">
-          <div className="flex px-4  bg-card rounded-md shadow-md">
+          <div className="flex px-4  dark:bg-card-dark rounded-md shadow-md">
             <Image
               src="/product-buyandread.svg"
               alt="BuyAndRead"
@@ -104,7 +104,7 @@ export function Products() {
         </div>
       </div>
       <div className="col-span-3 row-span-2 ">
-        <div className="flex px-4  bg-card rounded-md shadow-md">
+        <div className="flex px-4  dark:bg-card-dark rounded-md shadow-md">
           <Image
             src="/product-buyandread.svg"
             alt="BuyAndRead"

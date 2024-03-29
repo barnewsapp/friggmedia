@@ -21,6 +21,7 @@ const config: Config = {
         title: 'var(--title)',
         subtitle: 'var(--subtitle)',
         card: 'var(--card)',
+        'card-dark': '#0c0c17',
       },
       fontFamily: {
         lora: ['Lora', 'serif'],
