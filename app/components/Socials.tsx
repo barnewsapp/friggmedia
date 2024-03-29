@@ -4,7 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 export function Socials() {
   return (
-    <div className="flex flex-col  md:flex-row md:justify-between md:items-center   ">
+    <div className="flex flex-col sm:flex-row md:justify-between md:items-center   ">
       <div className="flex gap-6 ">
         <a href="#" className="light:opacity-55 text-lg hover:text-blue-600">
           Om oss
@@ -13,7 +13,7 @@ export function Socials() {
           Kontakt oss
         </a>
       </div>
-      <div className="flex gap-6">
+      <div className="flex flex-col sm:flex-row gap-2">
         <span className="light:opacity-55 items-center text-lg my-2 ">
           &copy; Frigg Media AS 2024
         </span>

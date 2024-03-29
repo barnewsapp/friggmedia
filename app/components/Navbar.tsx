@@ -30,7 +30,7 @@ export function Navbar() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
+          className="sm:hidden mx-4"
         />
         <NavbarBrand>
           <Logo />

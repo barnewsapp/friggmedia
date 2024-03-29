@@ -6,7 +6,7 @@ import { Navbar } from './components/Navbar';
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-between h-lvh bg-background text-foreground">
+    <div className="flex flex-col justify-between h-full bg-background text-foreground">
       <Navbar />
       <Hero />
       <Products />
