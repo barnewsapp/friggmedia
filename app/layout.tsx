@@ -3,6 +3,8 @@ import { NextUIProvider } from './components/NextUIProvider';
 
 import { Poppins, Lora } from 'next/font/google';
 import './globals.css';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
 
 const poppins = Poppins({
   weight: ['400', '600'], // Add any other weights you need
@@ -31,7 +33,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className={`${lora.className}${poppins.className} `}>
-        <NextUIProvider>{children}</NextUIProvider>
+        <NextUIProvider>
+          <div className="flex flex-col justify-between h-full bg-background text-foreground">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </NextUIProvider>
       </body>
     </html>
   );
