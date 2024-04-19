@@ -82,7 +82,7 @@ function Card({ title, description, imageUri }: CardProps) {
 
 export default function Infoside() {
   return (
-    <div className="flex flex-col justify-between h-full bg-background text-foreground items-center">
+    <div className="flex flex-col justify-between h-full bg-background text-foreground items-center mt-20">
       <Hero />
       <Card {...products.newsApp} />
       <Card {...products.eLeser} />
