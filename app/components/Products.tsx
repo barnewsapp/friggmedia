@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Card, CardWithImageLeft, CardWithImageTop, products } from './ProduktCard';
 
 export function Products() {
@@ -10,18 +11,18 @@ export function Products() {
         <div className="md:col-span-3">
           <CardWithImageTop product={products.buyAndRead} />
         </div>
-        <div className="md:col-span-2">
+        <Link href="/produkter" className="md:col-span-2">
           <CardWithImageTop product={products.newsApp} />
-        </div>
+        </Link>
       </div>
 
       <div className="flex flex-col gap-4 md:grid grid-cols-5">
-        <div className="md:col-span-2 md:row-span-4">
+        <Link href="/produkter" className="md:col-span-2 md:row-span-4">
           <Card product={products.eArkiv} />
-        </div>
-        <div className="md:col-span-3 md:row-span-2">
+        </Link>
+        <Link href="/produkter" className="md:col-span-3 md:row-span-2">
           <CardWithImageLeft product={products.eLeser} />
-        </div>
+        </Link>
         <div className="md:col-span-3 md:row-span-2">
           <CardWithImageLeft product={products.buyAndReadArchive} />
         </div>

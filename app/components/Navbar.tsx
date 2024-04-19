@@ -32,9 +32,11 @@ export function Navbar() {
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className="sm:hidden mx-4"
         />
-        <NavbarBrand>
-          <Logo />
-        </NavbarBrand>
+        <Link href="/">
+          <NavbarBrand>
+            <Logo />
+          </NavbarBrand>
+        </Link>
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden sm:flex">
