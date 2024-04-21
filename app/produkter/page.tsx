@@ -30,11 +30,11 @@ const Hightlight = ({ text }: { text: string }) => (
 
 function Hero() {
   return (
-    <div className=" md:max-w-screen-sm p-4 mx-4 sm:mx-auto dark:bg-card-dark  ">
-      <h1 className="text-6xl light:text-title font-lora font-medium text-center text-primary-900">
+    <div className="md:max-w-screen-sm p-4 mx-4 sm:mx-auto dark:bg-card-dark py-20">
+      <h1 className="text-4xl lg:text-6xl light:text-title font-lora font-medium text-center text-primary-900">
         Vi tilbyr løsninger for din bedrift
       </h1>
-      <p className="text-slate-500 text-lg md:text-xl my-4 text-center sm:text-start">
+      <p className="text-slate-500 text-xl my-4 text-center sm:text-start">
         Utforsk mulighetene med <Hightlight text="NyhetsApp" />, <Hightlight text="eArkiv" /> og{' '}
         <Hightlight text="eLeser" /> for å levere innhold til dine målgrupper.
       </p>
@@ -58,7 +58,7 @@ interface CardProps {
 
 function Card({ title, description, imageUri }: CardProps) {
   return (
-    <div className="flex flex-col max-w-screen-sm sm:flex-row p-4 sm:px-6 dark:bg-card-dark rounded-md shadow-md mx-4 my-8">
+    <div className="flex flex-col max-w-screen-sm sm:flex-row p-4 sm:px-6 dark:bg-card-dark rounded-md shadow-md mx-4 mb-12 justify-center">
       <div
         className={`sm:w-1/2 flex flex-col ${imageUri ? 'lg:pr-8' : 'lg:pr-0'} justify-center py-8`}
       >
@@ -84,9 +84,12 @@ export default function Infoside() {
   return (
     <div className="flex flex-col justify-between h-full bg-background text-foreground items-center mt-20">
       <Hero />
-      <Card {...products.newsApp} />
-      <Card {...products.eLeser} />
-      <Card {...products.eArkiv} />
+      <div>
+        <Card {...products.newsApp} />
+        <Card {...products.eLeser} />
+        <Card {...products.eArkiv} />
+      </div>
+
       <div className="mt-40">
         <CallToAction />
       </div>
