@@ -7,7 +7,7 @@ import { Socials } from './Socials';
 export function Footer() {
   return (
     <footer>
-      <div className=" px-8 py-4 ">
+      <div className="mx-4 px-8 pt-32 pb-16 space-y-5">
         <div className="flex flex-col md:flex-row ">
           <div className="mb-4 md:mb-0 ">
             <a href="#">
@@ -15,7 +15,6 @@ export function Footer() {
             </a>
           </div>
         </div>
-
         <Socials />
       </div>
     </footer>

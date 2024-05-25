@@ -1,24 +1,25 @@
-import Image from 'next/image';
-import { CallToAction } from '../components/CallToAction';
+import Image from "next/image";
+import { CallToAction } from "../components/CallToAction";
 
 const products = {
   newsApp: {
-    title: 'NyhetsApp',
+    title: "NyhetsApp",
     description:
-      'Appen integreres sømløst med deres CMS, slik at nettsideartikler publiseres automatisk i NyhetsAppen.',
-    imageUri: '/info-newsapp.svg',
+      "NyhetsAppen knyttes direkte til CMS’et slik at nettsideartikler publiseres automatisk i NyhetsAppen. Har utgiver en publikasjon kan denne også leses i appen, da appen har en innebygd eLeser. Både artikkelfunksjonen og eLeseren kan aktiveres/deaktiveres etter kundens behov. NyhetsAppen fungerer både på mobiltelefoner og på lesebrett. Varslinger er innebygd i appen slik at man kan kommunisere med brukerne. NyhetsAppen kan kobles til annonsesystemer, men har også et eget innebygd annonsesystem.",
+    imageUri: "/info-newsapp.svg",
   },
   eLeser: {
-    title: 'eLeser',
+    title: "eLeser",
     description:
-      ' For publikasjoner eller medlemsblad som dere ønsker skal være digitalt tilgjengelig.',
-    imageUri: '/info-ereader.svg',
+      "Har dere en publikasjon eller et medlemsblad som dere ønsker skal være digitalt tilgjengelig, benytter man eLeseren. eLeseren er utviklet av BuyAndRead og er skrevet i HTML5 som gjør at den kan kjøres på alle plattformer (PC, Mac, Lesebrett, Mobiltelefon). Den kan enkelt ligge bak en innlogging (PayWall) slik at bare de som kan logge seg inn, vil kunne lese publikasjonen digitalt.",
+    imageUri: "/info-ereader.svg",
   },
   eArkiv: {
-    title: 'eArkiv',
-    description: 'Denne knyttes sammen med eLeseren slik at brukerne også kan lese eldre utgaver.',
+    title: "eArkiv",
+    description:
+      "Produktet eArkiv knyttes sammen med eLeseren slik at brukerne også kan lese eldre utgaver. De eldre utgavene overføres til vårt system og gjøres tilgjengelige gjennom eLeseren. Alle utgavene gjøres søkbare slik at det er lett for brukeren å søke etter informasjon. Utgiver står fritt til å legge over sine eldre publikasjoner i vårt system. Publikasjonene vi har i vårt system er lagret på 3 forskjellige geografiske steder for maksimum sikkerhet.",
 
-    imageUri: '/info-earchive.svg',
+    imageUri: "/info-earchive.svg",
   },
 };
 
@@ -31,21 +32,14 @@ const Hightlight = ({ text }: { text: string }) => (
 function Hero() {
   return (
     <div className="md:max-w-screen-sm p-4 mx-4 sm:mx-auto dark:bg-card-dark py-20">
-      <h1 className="text-4xl lg:text-6xl light:text-title font-lora font-medium text-center text-primary-900">
+      <h1 className="text-5xl md:text-7xl light:text-title font-lora font-medium text-center text-primary-900">
         Vi tilbyr løsninger for din bedrift
       </h1>
-      <p className="text-slate-500 text-xl my-4 text-center sm:text-start">
-        Utforsk mulighetene med <Hightlight text="NyhetsApp" />, <Hightlight text="eArkiv" /> og{' '}
-        <Hightlight text="eLeser" /> for å levere innhold til dine målgrupper.
+      <p className="text-slate-500 text-xl my-4 text-start md:text-center">
+        Utforsk mulighetene med <Hightlight text="NyhetsApp" />,{" "}
+        <Hightlight text="eArkiv" /> og <Hightlight text="eLeser" /> for å
+        levere innhold til dine målgrupper.
       </p>
-      <div className="mt-6 flex justify-center ">
-        <a
-          href="#"
-          className="text-white text-md md:text-xl font-light bg-blue-700  hover:bg-blue-800  py-2 px-4 rounded inline-block"
-        >
-          Kontakt oss
-        </a>
-      </div>
     </div>
   );
 }
@@ -58,21 +52,29 @@ interface CardProps {
 
 function Card({ title, description, imageUri }: CardProps) {
   return (
-    <div className="flex flex-col max-w-screen-sm sm:flex-row p-4 sm:px-6 dark:bg-card-dark rounded-md shadow-md mx-4 mb-12 justify-center">
+    <div className="bg-white flex flex-col max-w-screen-lg sm:flex-row p-4 sm:px-6 dark:bg-card-dark rounded-md shadow-md mx-4 mb-12 justify-center">
       <div
-        className={`sm:w-1/2 flex flex-col ${imageUri ? 'lg:pr-8' : 'lg:pr-0'} justify-center py-8`}
+        className={`sm:w-1/2 flex flex-col ${
+          imageUri ? "lg:pr-8" : "lg:pr-0"
+        } justify-center py-8`}
       >
-        <h3 className="text-2xl sm:text-3xl text-primary-900 font-medium mb-2">{title}</h3>
+        <h3 className=" text-2xl sm:text-3xl text-primary-900 font-semibold mb-2">
+          {title}
+        </h3>
         <p className="text-lg text-slate-500 mb-4 ">{description}</p>
       </div>
 
-      <div className={`sm:w-1/2 flex justify-center ${imageUri ? 'mb-4 lg:mb-0' : ''}`}>
+      <div
+        className={`sm:w-1/3 flex justify-center ${
+          imageUri ? "mb-4 lg:mb-0" : ""
+        }`}
+      >
         <Image
           src={imageUri}
           alt={imageUri}
           className="object-contain w-full"
           width={100}
-          height={100}
+          height={100} 
           priority
         />
       </div>

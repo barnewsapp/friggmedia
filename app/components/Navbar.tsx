@@ -17,7 +17,7 @@ import { ThemeSwitcher } from './ThemeSwitch';
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ['Om oss', 'Kontakt oss'];
+  const menuItems = [{title: 'Om oss', path: "om-oss"}, {title: 'Kontakt', path: "kontakt"}];
 
   return (
     <NUINavbar
@@ -39,30 +39,29 @@ export function Navbar() {
         </Link>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="hidden sm:flex">
+      <NavbarContent justify="end" className="space-x-8 hidden sm:flex">
         <NavbarItem>
-          <Link color="foreground" className="opacity-55 text-xl hover:text-blue-600" href="#">
+          <Link color="foreground" className="text-lg text-slate-700 hover:text-slate-900" href="om-oss">
             Om oss
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
             color="foreground"
-            className="opacity-55 text-xl hover:text-blue-600"
-            href="#"
+            className="text-lg text-slate-700 hover:text-slate-900"
+            href="kontakt"
             aria-current="page"
           >
-            Kontakt oss
+            Kontakt
           </Link>
         </NavbarItem>
       </NavbarContent>
 
-      <ThemeSwitcher />
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color="foreground" className="w-full" href="#" size="lg">
-              {item}
+          <NavbarMenuItem key={`${item.title}-${index}`}>
+            <Link color="foreground" className="w-full" href={item.path} size="lg">
+              {item.title}
             </Link>
           </NavbarMenuItem>
         ))}

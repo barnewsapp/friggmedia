@@ -37,6 +37,12 @@ export const products = {
   eArkiv: {
     title: 'eArkiv',
     description: 'Denne knyttes sammen med eLeseren slik at brukerne også kan lese eldre utgaver.',
+    image: {
+      src: '/product-earchive.webp',
+      width: 150,
+      height: 150,
+      position: 'top' as const,
+    },
   },
 
   eLeser: {
@@ -81,19 +87,19 @@ export function CardWithImageTop({ product }: ProductCardProps) {
   const { title, description, image } = product;
 
   return (
-    <div className=" flex flex-1 flex-col justify-center h-full items-center py-8 gap-4 rounded-md shadow-md dark:bg-card-dark mx-4">
+    <div className="bg-white flex flex-1 flex-col justify-center h-full items-center py-8 gap-4 rounded-lg shadow-lg dark:bg-card-dark mx-4 transition-all hover:scale-105">
       {image && (
         <Image
           src={image.src}
-          alt={title}
+          alt={""}
           className="mb-4"
           width={image.width}
           height={image.height}
           priority
         />
       )}
-      <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-      <p className="text-sm md:text-base text-gray-2 mb-4 px-4">{description}</p>
+      <h3 className="text-2xl text-frigg-900 font-semibold">{title}</h3>
+      <p className="text-slate-500 md:text-center mb-4 px-4 max-w-sm">{description}</p>
     </div>
   );
 }
@@ -102,9 +108,9 @@ export function Card({ product }: ProductCardProps) {
   const { title, description, image } = product;
 
   return (
-    <div className=" flex flex-1 flex-col justify-center h-full items-center py-8 gap-4 rounded-md shadow-md dark:bg-card-dark mx-4">
-      <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-      <p className="text-sm md:text-base text-gray-2 mb-4 px-4">{description}</p>
+    <div className="bg-white flex flex-1 flex-col justify-center h-full items-center py-8 gap-4 rounded-lg shadow-md dark:bg-card-dark mx-4 transition-all hover:scale-105">
+      <h3 className="text-2xl text-frigg-900 font-semibold">{title}</h3>
+      <p className="text-slate-500 mb-4 px-4 md:text-center">{description}</p>
     </div>
   );
 }
@@ -113,11 +119,11 @@ export function CardWithImageLeft({ product }: ProductCardProps) {
   const { title, description, image } = product;
 
   return (
-    <div className="flex px-4 dark:bg-card-dark rounded-md shadow-md mx-4 ">
+    <div className="bg-white flex px-4 dark:bg-card-dark rounded-md shadow-lg mx-4 transition-all hover:scale-105">
       {image && (
         <Image
           src={image?.src}
-          alt={image.src}
+          alt={""}
           className="mb-4"
           width={image.width}
           height={image.height}
@@ -126,8 +132,8 @@ export function CardWithImageLeft({ product }: ProductCardProps) {
       )}
       <div className=" flex-1 ">
         <div className=" flex flex-1 flex-col justify-center  h-full py-8 gap-4 0 ">
-          <h3 className="text-2xl font-semibold mx-4">{title}</h3>
-          <p className="text-sm md:text-base text-gray-2 mb-4 px-4">{description}</p>
+          <h3 className="text-2xl text-frigg-900 font-semibold mx-4">{title}</h3>
+          <p className="text-slate-500 mb-4 px-4">{description}</p>
         </div>
       </div>
     </div>
