@@ -60,7 +60,7 @@ export function Navbar() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.title}-${index}`}>
-            <Link color="foreground" className="w-full" href={item.path} size="lg">
+            <Link color="foreground" className="w-full text-2xl mt-4 text-slate-700" href={item.path} size="lg">
               {item.title}
             </Link>
           </NavbarMenuItem>
