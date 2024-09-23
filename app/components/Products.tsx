@@ -3,8 +3,8 @@ import { Card, CardWithImageLeft, CardWithImageTop, products } from './ProduktCa
 
 export function Products() {
   return (
-    <div className="flex flex-col gap-4 mx-auto py-4 mb-20 max-w-screen-lg">
-      <h2 className="text-5xl text-center mb-3 font-lora text-frigg-900">Våre produkter</h2>
+    <div className="flex flex-col gap-8 mx-auto py-4 mb-20 max-w-screen-lg">
+      <h2 className="text-5xl md:text-6xl text-center mb-3 font-lora text-frigg-900">Våre produkter</h2>
 
       {/* Adjusted for mobile-first: Default is single column, expands in md: breakpoint */}
       <div className="flex flex-col gap-4 md:grid md:grid-cols-5">
@@ -18,7 +18,7 @@ export function Products() {
         </Link>
       </div>
 
-      <div className="flex flex-col gap-4 md:grid grid-cols-5">
+      <div className="flex flex-col gap-x-4 gap-y-8 md:grid grid-cols-5">
         <Link href="/produkter" className="md:col-span-2 md:row-span-4">
           <CardWithImageTop product={products.eArkiv} />
         </Link>
@@ -31,8 +31,10 @@ export function Products() {
           </a>
         </div>
       </div>
-      <div className="mt-4">
-        <CardWithImageLeft product={products.searchAndRead} />
+      <div>
+        <a href="https://searchandread.com" target='_blank'>
+          <CardWithImageLeft product={products.searchAndRead} />
+        </a>
       </div>
     </div>
   );

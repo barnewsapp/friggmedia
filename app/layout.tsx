@@ -34,7 +34,7 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className={`${lora.className}${poppins.className} `}>
         <NextUIProvider>
-          <div className="flex flex-col justify-between h-full bg-background text-foreground">
+          <div className="flex flex-col justify-between min-h-screen bg-background text-foreground">
             <Navbar />
             {children}
             <Footer />

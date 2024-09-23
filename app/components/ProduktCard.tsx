@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 interface Product {
   title: string;
@@ -26,7 +27,7 @@ export const products = {
   newsApp: {
     title: 'NyhetsApp',
     description:
-      'Denne knyttes direkte til CMS for å sikre at nettsideartikler publiseres automatisk i NyhetsAppen.',
+      'Appen knyttes direkte til CMS for å sikre at nettsideartikler publiseres automatisk i NyhetsAppen.',
     image: {
       src: '/product-newsapp.svg',
       width: 160,
@@ -36,7 +37,7 @@ export const products = {
   },
   eArkiv: {
     title: 'eArkiv',
-    description: 'Denne knyttes sammen med eLeseren slik at brukerne også kan lese eldre utgaver.',
+    description: 'eArkiv knyttes sammen med eLeseren slik at brukerne også kan lese eldre utgaver.',
     image: {
       src: '/product-earchive.webp',
       width: 150,
@@ -57,7 +58,7 @@ export const products = {
     },
   },
   buyAndReadArchive: {
-    title: 'BuyAndRead Arkiv',
+    title: 'BuyAndRead-arkivet',
     description: 'Et digitalt arkiv hvor man søke i 1 122 941 utgaver og 34 959 219 sider.',
     image: {
       src: '/product-buyandread.svg',
@@ -83,11 +84,20 @@ interface ProductCardProps {
   imagePlacement?: 'top' | 'left';
 }
 
+function ArrowCircle() {
+
+  return (
+    <div className='w-8 h-8 flex items-center justify-center text-slate-500 bg-frigg-50 rounded-full'>
+      <FaArrowRightLong />
+    </div>
+  );
+}
+
 export function CardWithImageTop({ product }: ProductCardProps) {
   const { title, description, image } = product;
 
   return (
-    <div className="bg-white flex flex-1 flex-col justify-center h-full items-center py-8 gap-4 rounded-lg shadow-lg dark:bg-card-dark mx-4 transition-all hover:scale-105">
+    <div className="bg-white flex flex-1 flex-col justify-center h-full items-center py-8 gap-2 rounded-3xl  dark:bg-card-dark mx-4 transition-all hover:scale-105">
       {image && (
         <Image
           src={image.src}
@@ -98,8 +108,9 @@ export function CardWithImageTop({ product }: ProductCardProps) {
           priority
         />
       )}
-      <h3 className="text-2xl text-frigg-900 font-semibold">{title}</h3>
-      <p className="text-slate-500 md:text-center mb-4 px-4 max-w-sm">{description}</p>
+      <h3 className="text-3xl text-frigg-800 font-semibold">{title}</h3>
+      <p className="text-2xl text-slate-500 text-center mb-4 px-4 max-w-sm">{description}</p>
+      <ArrowCircle></ArrowCircle>
     </div>
   );
 }
@@ -108,9 +119,9 @@ export function Card({ product }: ProductCardProps) {
   const { title, description, image } = product;
 
   return (
-    <div className="bg-white flex flex-1 flex-col justify-center h-full items-center py-8 gap-4 rounded-lg shadow-md dark:bg-card-dark mx-4 transition-all hover:scale-105">
-      <h3 className="text-2xl text-frigg-900 font-semibold">{title}</h3>
-      <p className="text-slate-500 mb-4 px-4 md:text-center">{description}</p>
+    <div className="bg-white flex flex-1 flex-col justify-center h-full items-center py-8 gap-2 rounded-3xl shadow-md dark:bg-card-dark mx-4 transition-all hover:scale-105">
+      <h3 className="text-3xl text-frigg-800 font-semibold">{title}</h3>
+      <p className="text-2xl text-slate-500 mb-4 px-4 md:text-center">{description}</p>
     </div>
   );
 }
@@ -119,7 +130,7 @@ export function CardWithImageLeft({ product }: ProductCardProps) {
   const { title, description, image } = product;
 
   return (
-    <div className="bg-white flex px-4 dark:bg-card-dark rounded-md shadow-lg mx-4 transition-all hover:scale-105">
+    <div className="bg-white flex flex-col md:flex-row items-center px-8 py-8 gap-2 dark:bg-card-dark rounded-3xl mx-4 transition-all hover:scale-105">
       {image && (
         <Image
           src={image?.src}
@@ -131,11 +142,12 @@ export function CardWithImageLeft({ product }: ProductCardProps) {
         />
       )}
       <div className=" flex-1 ">
-        <div className=" flex flex-1 flex-col justify-center  h-full py-8 gap-4 0 ">
-          <h3 className="text-2xl text-frigg-900 font-semibold mx-4">{title}</h3>
-          <p className="text-slate-500 mb-4 px-4">{description}</p>
+        <div className="ml-6 flex flex-1 flex-col justify-center h-full gap-2 0 text-center md:text-left">
+          <h3 className="text-3xl text-frigg-800 font-semibold">{title}</h3>
+          <p className="text-2xl text-slate-500 max-w-lg">{description}</p>
         </div>
       </div>
+      <ArrowCircle></ArrowCircle>
     </div>
   );
 }

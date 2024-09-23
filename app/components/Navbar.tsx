@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <NUINavbar
       maxWidth="full"
-      className="px-8 justify-between"
+      className="px-8 justify-center"
       classNames={{ wrapper: 'px-0' }}
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
@@ -41,14 +41,14 @@ export function Navbar() {
 
       <NavbarContent justify="end" className="space-x-8 hidden sm:flex">
         <NavbarItem>
-          <Link color="foreground" className="text-lg text-slate-700 hover:text-slate-900" href="om-oss">
+          <Link color="foreground" className="text-xl text-slate-700 hover:text-slate-900" href="om-oss">
             Om oss
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
             color="foreground"
-            className="text-lg text-slate-700 hover:text-slate-900"
+            className="text-xl text-slate-700 hover:text-slate-900"
             href="kontakt"
             aria-current="page"
           >

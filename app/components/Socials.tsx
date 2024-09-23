@@ -4,40 +4,40 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export function Socials() {
   return (
-    <div className="flex flex-col sm:flex-row md:justify-between md:items-center text-slate-700">
-      <div className="flex gap-6 ">
-        <a href="om-oss" className="light:opacity-55 text-lg hover:text-slate-800">
+    <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
+      <div className="flex gap-12 md:gap-6 text-slate-700 text-xl">
+        <a href="om-oss" className="hover:text-frigg-800">
           Om oss
         </a>
-        <a href="#" className="light:opacity-55 text-lg hover:text-slate-800">
+        <a href="kontakt" className="hover:text-frigg-800">
           Kontakt
         </a>
       </div>
-      <div className="flex flex-col sm:flex-row gap-2">
-        <span className="items-center text-lg my-2 ">
-          &copy; Frigg Media AS 2024
+      <div className="flex flex-col md:flex-row gap-8 md:gap-2">
+        <span className="items-center text-xl my-2 text-slate-700">
+          &copy; Frigg Media AS {new Date().getFullYear()}
         </span>
-        <div className="md:ml-6 flex space-x-4 items-center">
+        <div className="md:ml-6 flex space-x-12 md:space-x-4 text-xl items-center text-slate-700 dark:text-white">
           <a
-            href="#"
+            href="https://www.facebook.com/BuyAndRead/"
             aria-label="Facebook"
-            className="text-blue-800 hover:text-slate-800"
+            className=""
           >
-            <FaFacebook className="text-slate-600 dark:text-white" />
+            <FaFacebook className="hover:text-frigg-800" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/buyandread/#"
             aria-label="Instagram"
-            className="text-blue-800 hover:text-slate-800"
+            className="0"
           >
-            <FaInstagram className=" text-slate-600 dark:text-white" />
+            <FaInstagram className="hover:text-frigg-800" />
           </a>
           <a
-            href="#"
-            aria-label="Other Social Media"
-            className="text-blue-800 hover:text-slate-800"
+            href="#https://x.com/buyandread"
+            aria-label="Twitter / X"
+            className=""
           >
-            <FaXTwitter className="text-slate-600 dark:text-white" />
+            <FaXTwitter className="hover:text-frigg-800" />
           </a>
         </div>
       </div>
