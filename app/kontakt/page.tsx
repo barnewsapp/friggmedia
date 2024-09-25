@@ -22,7 +22,7 @@ function IconCircle(icon: string) {
 function ContactCard(props: { href: string; icon: string; text: string }) {
   return (
     <a href={props.href} className="w-full">
-          <div className="bg-white flex text-2xl items-center h-full space-x-5 p-6 rounded-2xl shadow-md dark:bg-card-dark transition-all hover:scale-105">
+          <div className="bg-white flex text-xl md:text-2xl items-center h-full space-x-5 p-6 rounded-2xl shadow-md dark:bg-card-dark transition-all hover:scale-105">
             <div className='w-11 h-11 flex items-center justify-center text-slate-500 bg-frigg-50 rounded-full'>
               {IconCircle(props.icon)}
             </div>
