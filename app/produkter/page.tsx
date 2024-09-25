@@ -73,7 +73,7 @@ interface CardProps {
 
 function Card({ title, description, imageUri, features }: CardProps) {
   return (
-    <div className="bg-white flex flex-col max-w-screen-lg sm:flex-row p-4 py-8 px-6 dark:bg-card-dark rounded-3xl shadow-md mx-4 mb-12 justify-center">
+    <div className="bg-white flex flex-col max-w-screen-lg sm:flex-row p-4 py-8 px-6 dark:bg-card-dark rounded-3xl mx-4 mb-12 justify-center">
       <div
         className={`sm:w-1/2 flex flex-col ${
           imageUri ? "lg:pr-8" : "lg:pr-0"
