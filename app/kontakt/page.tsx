@@ -1,7 +1,38 @@
 import React from "react";
 import { Link } from "@nextui-org/react";
-import { LuPhone, LuMail } from "react-icons/lu";
+import { LuPhone, LuMail, LuMessagesSquare } from "react-icons/lu";
+import { IconType } from "react-icons";
 
+
+
+function IconCircle(icon: string) {
+
+  switch (icon) {
+    case "mail":
+      return <LuMail />
+      break;
+    case "phone":
+      return <LuPhone />
+    default:
+      return <LuMessagesSquare />
+      break;
+  }
+}
+
+function ContactCard(props: { href: string; icon: string; text: string }) {
+  return (
+    <a href={props.href} className="w-full">
+          <div className="bg-white flex text-2xl items-center h-full space-x-5 p-6 rounded-2xl shadow-md dark:bg-card-dark transition-all hover:scale-105">
+            <div className='w-11 h-11 flex items-center justify-center text-slate-500 bg-frigg-50 rounded-full'>
+              {IconCircle(props.icon)}
+            </div>
+            <p className="text-frigg-400">
+              {props.text}
+            </p>
+          </div> 
+    </a>
+  )
+}
 
 export default function ContactPage() {
   return (
@@ -16,22 +47,8 @@ export default function ContactPage() {
       </p>
       
       <div className="mt-10 flex flex-col md:flex-row gap-4 md:gap-8">
-        <a href="#">
-          <div className="bg-white flex text-2xl items-center h-full space-x-3 p-6 rounded-2xl shadow-md dark:bg-card-dark transition-all hover:scale-105">
-            <LuMail className="text-frigg-700" />
-              <p className="text-frigg-400">
-                example@friggmedia.no
-              </p>
-          </div> 
-        </a>
-        <a href="#" className="w-full">
-          <div className="bg-white flex text-2xl items-center h-full space-x-3 p-6 rounded-2xl shadow-md dark:bg-card-dark transition-all hover:scale-105">
-            <LuPhone className="text-frigg-700" />
-              <p className="text-frigg-400">
-                +47 12345678
-              </p>
-          </div> 
-        </a>
+        <ContactCard icon="mail" href="#" text="example@friggmedia.no"></ContactCard>
+        <ContactCard icon="phone" href="#" text="+47 12345678"></ContactCard>
       </div>
     </div>
   );

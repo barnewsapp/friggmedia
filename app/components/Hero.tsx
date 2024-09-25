@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <div className="flex flex-col md:justify-center md:max-w-screen-lg mx-4 sm:mx-auto mt-52 mb-60">
+    <div className="flex flex-col md:justify-center md:max-w-screen-lg ml-4 md:mx-auto mt-10 md:mt-52 mb-60">
       <h1 className="text-frigg-900 text-6xl md:text-8xl light:text-title font-lora font-medium text-start md:text-center">
         Vi leverer teknologi for digitale lese
         <wbr />

@@ -43,18 +43,18 @@ const products = {
 };
 
 const Hightlight = ({ text }: { text: string }) => (
-  <span className="text-slate-800 font-semibold">
+  <span className="text-slate-800">
     {text}
   </span>
 );
 
 function Hero() {
   return (
-    <div className="md:max-w-screen-sm p-4 mx-4 sm:mx-auto dark:bg-card-dark py-20">
-      <h1 className="text-xl md:text-6xl light:text-title font-lora font-medium text-center text-primary-900">
+    <div className="pl-4 mx-4 pb-20 md:py-20">
+      <h1 className="text-frigg-900 text-5xl md:text-7xl light:text-title font-lora font-medium text-start md:text-center">
         Løsninger for din bedrift
       </h1>
-      <p className="text-slate-n00 text-2xl mt-8 md:px-16 text-start md:mx-auto md:text-center">
+      <p className="md:mx-auto md:max-w-2xl mt-8 text-slate-500 light:text-subtitle text-2xl md:text-3xl text-start md:text-center">
         Utforsk mulighetene med <Hightlight text="NyhetsApp" />,{" "}
         <Hightlight text="eArkiv" /> og <Hightlight text="eLeser" /> for å
         levere innhold til dine målgrupper.
@@ -117,7 +117,7 @@ function Card({ title, description, imageUri, features }: CardProps) {
 
 export default function Infoside() {
   return (
-    <div className="flex flex-col justify-between h-full bg-background text-foreground items-center mt-20">
+    <div className="flex flex-col justify-between h-full bg-background text-foreground items-center mt-10 md:mt-20">
       <Hero />
       <div>
         <Card {...products.newsApp} />
